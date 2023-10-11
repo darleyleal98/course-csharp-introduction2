@@ -13,6 +13,8 @@ namespace Course.Entities
         private WorkerLevel Level { get; set; }
         private double BaseSalary { get; set; }
 
-        // Voltar na aula e criar os métodos
+        public void AddContract(HourContract contract) { }
+        public void RemoveContract(HourContract contract) { }
+        public double Income(int year, int month) { }
     }
 }
