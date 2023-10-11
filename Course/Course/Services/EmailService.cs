@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Course.Services
 {
-    internal class EmailService
+    public class EmailService
     {
+        public void SendEmail(string sender, string subject, string message) { }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Course.Services
 {
-    internal class AuthService
+    public class AuthService
     {
+        public string GetToken(string username, string password) { }
+        public string RefreshToken(string token) { }
+        public void SendNewPassword(string email) { }
+
     }
 }
