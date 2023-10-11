@@ -1,9 +1,5 @@
 ﻿using Course.Entities.Enums;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Course.Entities
 {
@@ -13,8 +9,31 @@ namespace Course.Entities
         private WorkerLevel Level { get; set; }
         private double BaseSalary { get; set; }
 
-        public void AddContract(HourContract contract) { }
-        public void RemoveContract(HourContract contract) { }
-        public double Income(int year, int month) { }
+        //Composição entre as classes
+        private Departament Departament { get; set; }
+        //Composição -> Um trabalhador poderá ter vários contratos
+        private List<HourContract> Contracts { get; set; } = new List<HourContract>();
+        
+        public Worker() { }
+        public Worker(string name, WorkerLevel level, double baseSalary, Departament departament)
+        {
+            Name = name;
+            Level = level;
+            BaseSalary = baseSalary;
+            Departament = departament;
+        }
+
+        public void AddContract(HourContract contract)
+        {
+            Contracts.Add(contract);
+        }
+        public void RemoveContract(HourContract contract) 
+        {
+            Contracts.Remove(contract);
+        }
+        public double Income(int year, int month)
+        {
+
+        }
     }
 }

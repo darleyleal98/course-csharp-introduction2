@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Course.Entities
 {
@@ -12,6 +8,17 @@ namespace Course.Entities
         private double ValuePerHour { get; set; }
         private int Hours {  get; set; }
 
-        public double TotalValue() { }
+        public HourContract() { }
+        public HourContract(DateTime Date, double ValuePerHour, int hours)
+        {
+            Date = Date;
+            ValuePerHour = ValuePerHour;
+            Hours = hours;
+        }
+
+        public double TotalValue() 
+        {
+            return Hours * ValuePerHour;
+        }
     }
 }
