@@ -4,9 +4,9 @@ namespace Course.Entities
 {
     public class HourContract
     {
-        private DateTime Date {  get; set; }
-        private double ValuePerHour { get; set; }
-        private int Hours {  get; set; }
+        public DateTime Date {  get; set; }
+        public double ValuePerHour { get; set; }
+        public int Hours {  get; set; }
 
         public HourContract() { }
         public HourContract(DateTime Date, double ValuePerHour, int hours)
