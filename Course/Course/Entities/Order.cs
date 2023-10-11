@@ -19,5 +19,18 @@ namespace Course.Entities
                    $"Moment: {Moment}\n" +
                    $"Status: {Status}\n";
         }
+
+        public void AddItem(OrdemItem ordem)
+        {
+
+        }
+        public void RemoveItem(OrdemItem item)
+        {
+
+        }
+        public double Total()
+        {
+
+        }
     }
 }
