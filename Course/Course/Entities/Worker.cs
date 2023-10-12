@@ -5,14 +5,14 @@ namespace Course.Entities
 {
     public class Worker
     {
-        private string Name {  get; set; }
-        private WorkerLevel Level { get; set; }
-        private double BaseSalary { get; set; }
+        public string Name {  get; set; }
+        public WorkerLevel Level { get; set; }
+        public double BaseSalary { get; set; }
 
         //Composição entre as classes
-        private Departament Departament { get; set; }
+        public Departament Departament { get; set; }
         //Composição -> Um trabalhador poderá ter vários contratos
-        private List<HourContract> Contracts { get; set; } = new List<HourContract>();
+        public List<HourContract> Contracts { get; set; } = new List<HourContract>();
         
         public Worker() { }
         public Worker(string name, WorkerLevel level, double baseSalary, Departament departament)
