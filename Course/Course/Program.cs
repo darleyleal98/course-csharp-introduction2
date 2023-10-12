@@ -50,7 +50,7 @@ namespace Course
 
            Console.WriteLine($"Name: {worker.Name}");
            Console.WriteLine($"Departament: {worker.Departament.Name}");
-           Console.WriteLine();
+           Console.WriteLine($"Income for {monthAndYear}: {worker.Income(year, month):c} ");
         }
     }
 }
